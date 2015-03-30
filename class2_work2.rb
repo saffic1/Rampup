@@ -1,6 +1,6 @@
-age = 15
 
-gets age.to_i
+
+age = gets.to_i		
 
 case
 

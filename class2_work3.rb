@@ -1,3 +1,3 @@
-age = 12
+age = 15
 
-(age = 13) and (age / 2)
+(age = 15) and (age / 2)
