@@ -9,20 +9,20 @@ puts "Guess a number: "
 number = gets.chomp.to_i
 
 
-if number == magic_num
+  if number == magic_num
 	puts "You guessed correctly. Congrats!"
 
 	break
 
 
-elsif number < magic_num
+   elsif number < magic_num
 	puts "Your guess is too low. Try again"
 
-else 
+   else 
 
 	puts "Your guess is too high. Try again"
 
-end
+  end
 
 guess_num -= 1
 

@@ -11,14 +11,14 @@ question = gets.chomp
 
 	if (question == question.upcase) && (question == answer)
 
-	break 
+	  break 
 
-	elsif (question == question.upcase) && (question != answer)
+	  elsif (question == question.upcase) && (question != answer)
 		puts "NO, NOT SINCE #{year_between}!"
 
-	else (question != question.upcase) && (question != answer)
+	  else (question != question.upcase) && (question != answer)
 		puts "HUH?!, SPEAK UP SONNY!"
 
-end
+	end
 
 end

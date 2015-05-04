@@ -6,14 +6,14 @@ while goodbye != 2
 	
 	if question == 'BYE'
 		goodbye += 1
-	else
+	  else
 		goodbye = 0
 	end
 
 	if question != question.upcase
 		puts 'HUH?!, SPEAK UP SONNY!'
 
-	else 
+	  else 
 		puts 'NO, NOT SINCE ' + rand(1930..1980).to_s+'!'
 	end
 	question = gets.chomp
