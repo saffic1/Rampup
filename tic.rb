@@ -18,9 +18,9 @@ class Tic
     @cpu = rand() > 0.5 ? 'X' : 'O'
     @user = @cpu == 'X' ? 'O' : 'X'
     
-    @cpu_name = "Ruby"
+    @cpu_name = "Computer"
     put_line
-    puts "\n  RUBY TIC TAC TOE"
+    puts "\n  TIC TAC TOE"
     print "\n What is your name? "
     @user_name = gets.chomp
     put_bar
@@ -52,15 +52,15 @@ class Tic
   end
   
   def put_line
-    puts ("-" * 80)
+    puts ("-" * 50)
   end
   
   def put_bar
-    puts ("#" * 80)
-    puts ("#" * 80)
+    puts ("#" * 50)
+    puts ("#" * 50)
   end
   
-  def draw_game
+  def draw_board
     puts ""
     puts " Wins: #{@cpu_name}:#{@cpu_score} #{@user_name}:#{@user_score}"
     puts ""
@@ -141,7 +141,7 @@ class Tic
   def user_turn
     put_line
     puts "\n  RUBY TIC TAC TOE"
-    draw_game
+    draw_board
     print "\n #{@user_name}, please make a move or type 'exit' to quit: "
     input = gets.chomp.downcase.to_sym
     put_bar
@@ -192,7 +192,7 @@ class Tic
       
       if times_in_column(column, @cpu) == 3
         put_line
-        draw_game
+        draw_board
         put_line
         puts ""
         puts " Game Over -- #{@cpu_name} WINS!!!\n"
@@ -203,7 +203,7 @@ class Tic
       
       if times_in_column(column, @user) == 3
         put_line
-        draw_game
+        draw_board
         put_line
         puts ""
         puts " Game Over -- #{@user_name} WINS!!!\n"
@@ -222,7 +222,7 @@ class Tic
         end
       else
         put_line
-        draw_game
+        draw_board
         put_line
         puts ""
         puts " Game Over -- DRAW!\n"
@@ -233,7 +233,6 @@ class Tic
 
   def ask_to_play_again(user_goes_first)
     print " Play again? (Yn): "
-    STDOUT.flush
     response = gets.chomp.downcase
     case response
     when "y"   then restart_game(user_goes_first)
